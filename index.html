@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Sain | Portfolio — B.Tech CSE (AI) & Web Developer</title>
+    <meta name="description"
+        content="Dhruv Sain — B.Tech CSE (AI) student & aspiring Full Stack Web Developer. Explore my skills, projects, and get in touch.">
+    <meta name="author" content="Dhruv Sain">
+    <meta name="theme-color" content="#050510">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    </noscript>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Cursor Trail Canvas -->
+    <canvas id="trail-canvas"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <a href="#home" class="logo" id="logo-home" aria-label="Back to top">
+            Dhruv.
+        </a>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="nav-theme-item">
+                <span class="nav-toggle-label">Dark</span>
+                <button class="bouncy-toggle checked" id="theme-toggle" role="switch" aria-checked="true"
+                    aria-label="Toggle Dark/Light Mode">
+                    <div class="bouncy-toggle-thumb"></div>
+                    <div class="bouncy-toggle-ripple"></div>
+                </button>
+                <span class="nav-toggle-label">Light</span>
+            </li>
+            <li>
+                <button id="admin-panel-btn" class="admin-nav-btn" aria-label="Open Admin Panel">
+                    <i class="fas fa-lock" id="admin-btn-icon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-inner">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="editable" data-key="hero.title">Hi, I'm <span class="highlight sparkle-text">Dhruv
+                            Sain</span></h1>
+                    <h2 class="subtitle editable" data-key="hero.subtitle">
+                        <span id="typed-text"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <div class="hero-info">
+                        <p class="editable" data-key="hero.location"><i class="fas fa-map-marker-alt"></i> Jaipur,
+                            Rajasthan, India</p>
+                        <p class="editable" data-key="hero.email"><i class="fas fa-envelope"></i> dhruvsen681@gmail.com
+                        </p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary magnetic">View My Work</a>
+                        <a href="#contact" class="btn secondary magnetic">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal-section">
+            <div class="section-header">
+                <h2>About <span class="highlight">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text card glass-card editable-area">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <p class="editable" data-key="about.p1">I am a second-year B.Tech Computer Science (AI) student
+                        currently exploring full stack web
+                        development. I have a strong foundation in programming fundamentals, object-oriented
+                        programming, and data structures, with hands-on experience in C++ and Python.</p>
+                    <p class="editable" data-key="about.p2">I am actively building my skills through structured learning
+                        and practical experimentation, with
+                        the goal of starting freelance work in web development. I value clean code, continuous learning,
+                        and clear communication, and I am steadily converting theory into practice.</p>
+                </div>
+                <div class="freelance-focus card glass-card">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <h3><i class="fas fa-laptop-code highlight-icon"></i> Freelance Focus</h3>
+                    <ul class="styled-list">
+                        <li>Static websites (HTML/CSS)</li>
+                        <li>Basic interactive websites using JavaScript</li>
+                        <li>Beginner-level web development tasks</li>
+                        <li>Code cleanup and documentation (entry-level)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section alt-bg reveal-section">
+            <div class="section-header">
+                <h2>My <span class="highlight">Skills</span></h2>
+            </div>
+            <div class="skills-interactive">
+                <div class="skill-list">
+                    <button class="skill-btn magnetic" data-icon="devicon-cplusplus-plain" data-name="C++"
+                        data-color="#00599C">C++</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-python-plain" data-name="Python"
+                        data-color="#3776AB">Python</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-html5-plain" data-name="HTML5"
+                        data-color="#E34F26">HTML5</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-css3-plain" data-name="CSS3"
+                        data-color="#1572B6">CSS3</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-javascript-plain" data-name="JavaScript"
+                        data-color="#F7DF1E">JavaScript</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-vscode-plain" data-name="VS Code"
+                        data-color="#007ACC">VS Code</button>
+                    <button class="skill-btn magnetic" data-icon="devicon-github-original" data-name="GitHub"
+                        data-color="#ffffff">GitHub</button>
+                </div>
+
+                <div class="skill-display">
+                    <div class="skill-popup" id="skill-popup">
+                        <i class="fas fa-mouse-pointer" id="skill-popup-icon" style="color: var(--text-secondary);"></i>
+                        <h3 id="skill-popup-name">Click a Skill!</h3>
+                        <div class="pixel-particles"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section reveal-section">
+            <div class="section-header">
+                <h2><span class="highlight">Education</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-info card glass-card">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3>B.Tech in Computer Science Engineering (AI)</h3>
+                        <p class="institution"><i class="fas fa-university"></i> Anand International Engineering College
+                        </p>
+                        <p class="date"><i class="fas fa-calendar-alt"></i> 2nd Year &mdash; 4th Semester</p>
+                    </div>
+                    <h3 class="mt-2"><i class="fas fa-star highlight-icon"></i> Strong Subjects</h3>
+                    <div class="tags">
+                        <span class="tag">Object-Oriented Programming</span>
+                        <span class="tag">Data Structures &amp; Algorithms</span>
+                        <span class="tag">Python Programming</span>
+                    </div>
+                </div>
+                <div class="education-stats card glass-card">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <h3><i class="fas fa-chart-line highlight-icon"></i> Academic Snapshot</h3>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">2nd</span>
+                            <span class="stat-label">Year</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4th</span>
+                            <span class="stat-label">Semester</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">CSE</span>
+                            <span class="stat-label">Branch</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">AI</span>
+                            <span class="stat-label">Specialisation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section alt-bg reveal-section">
+            <div class="section-header">
+                <h2>My <span class="highlight">Projects</span></h2>
+                <p>Explore my recent work</p>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Cards are generated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section alt-bg text-center reveal-section">
+            <div class="section-header">
+                <h2>Get In <span class="highlight">Touch</span></h2>
+                <p>Feel free to reach out for freelance work or collaborations!</p>
+            </div>
+            <div class="contact-cards">
+                <a href="mailto:dhruvsen681@gmail.com" class="contact-card card glass-card hover-effect">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <i class="fas fa-envelope fa-2x highlight-icon"></i>
+                    <h3>Email</h3>
+                    <p>dhruvsen681@gmail.com</p>
+                </a>
+                <a href="https://github.com/dhruv0me" target="_blank" class="contact-card card glass-card hover-effect">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <i class="fab fa-github fa-2x highlight-icon"></i>
+                    <h3>GitHub</h3>
+                    <p>github.com/dhruv0me</p>
+                </a>
+                <div class="contact-card card glass-card hover-effect">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <i class="fas fa-map-marker-alt fa-2x highlight-icon"></i>
+                    <h3>Location</h3>
+                    <p>Jaipur, Rajasthan</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form id="contact-form" class="contact-form card glass-card">
+                    <div class="glow-border"></div>
+                    <div class="shimmer"></div>
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" class="form-input" placeholder="john@example.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" class="form-input" placeholder="Hello..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary magnetic submit-btn" id="contact-submit">
+                        <span>Send Message</span> <i class="fas fa-paper-plane" style="margin-left:8px;"></i>
+                    </button>
+                    <div id="contact-status" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2026 Dhruv Sain. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== ADMIN PANEL MODAL ===== -->
+    <div class="admin-panel-overlay" id="admin-panel-overlay" role="dialog" aria-modal="true" aria-label="Admin Panel">
+        <div class="admin-panel-modal" id="admin-panel-modal">
+            <!-- Close button -->
+            <button class="admin-panel-close" id="admin-panel-close" aria-label="Close">&times;</button>
+
+            <!-- Header -->
+            <div class="admin-panel-header">
+                <div class="panel-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div>
+                    <h3>Admin Panel</h3>
+                    <p id="admin-panel-subtitle">Sign in to manage your portfolio</p>
+                </div>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="admin-login-section">
+                <form class="admin-login-form" id="admin-login-form" autocomplete="off">
+                    <div class="admin-input-group">
+                        <i class="fas fa-user"></i>
+                        <input class="admin-input" id="admin-id-input" type="text" placeholder="Admin ID"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="admin-input-group">
+                        <i class="fas fa-key"></i>
+                        <input class="admin-input" id="admin-pass-input" type="password" placeholder="Password"
+                            autocomplete="off" required>
+                    </div>
+                    <p class="admin-login-error" id="admin-login-error"></p>
+                    <button type="submit" class="admin-login-btn">Sign In &rarr;</button>
+                </form>
+            </div>
+
+            <!-- CONTROLS (shown after login) -->
+            <div class="admin-controls" id="admin-controls">
+
+                <p class="admin-section-title">Site Controls</p>
+
+                <!-- Edit Mode Toggle -->
+                <div class="admin-toggle-row">
+                    <div class="admin-toggle-info">
+                        <i class="fas fa-pen"></i>
+                        <div class="admin-toggle-text">
+                            <strong>Edit Mode</strong>
+                            <span>Click text to edit content</span>
+                        </div>
+                    </div>
+                    <div class="bouncy-toggle-wrap" id="editmode-toggle-wrap">
+                        <button class="bouncy-toggle" id="editmode-bouncy-toggle" role="switch" aria-checked="false"
+                            aria-label="Toggle Edit Mode">
+                            <div class="bouncy-toggle-thumb"></div>
+                            <div class="bouncy-toggle-ripple"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Admin Plan Toggle -->
+                <div class="admin-toggle-row">
+                    <div class="admin-toggle-info">
+                        <i class="fas fa-crown"></i>
+                        <div class="admin-toggle-text">
+                            <strong>Admin Plan</strong>
+                            <span class="admin-plan-badge" id="admin-plan-badge">Basic</span>
+                        </div>
+                    </div>
+                    <div class="bouncy-toggle-wrap" id="plan-toggle-wrap">
+                        <button class="bouncy-toggle" id="plan-bouncy-toggle" role="switch" aria-checked="false"
+                            aria-label="Toggle Admin Plan">
+                            <div class="bouncy-toggle-thumb"></div>
+                            <div class="bouncy-toggle-ripple"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="admin-divider"></div>
+
+                <!-- Project Manager -->
+                <div class="admin-proj-section" id="admin-proj-section">
+                    <p class="admin-proj-title"><i class="fas fa-images"
+                            style="margin-right:0.4rem;color:var(--accent-color)"></i>Manage Projects</p>
+                    <div class="admin-proj-list" id="admin-proj-list"></div>
+                    <button class="admin-add-proj-btn" id="admin-add-proj-btn">
+                        <i class="fas fa-plus"></i> Add Project
+                    </button>
+                </div>
+
+                <!-- Project Edit Sub-panel (overlays controls) -->
+                <div class="proj-edit-modal" id="proj-edit-modal">
+                    <div class="proj-edit-modal-header">
+                        <h4 id="proj-edit-modal-title">Edit Project</h4>
+                        <button class="proj-edit-back" id="proj-edit-back"><i class="fas fa-arrow-left"></i>
+                            Back</button>
+                    </div>
+                    <!-- Image Upload -->
+                    <div>
+                        <span class="proj-input-label">Project Image</span>
+                        <div class="proj-img-upload-area" id="proj-img-upload-area">
+                            <img class="proj-img-preview" id="proj-img-preview" src="" alt="Preview">
+                            <label class="proj-img-upload-label" for="proj-img-file">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click or drag to upload</span>
+                                <span style="font-size:0.65rem;opacity:0.6">JPG, PNG, WebP, GIF</span>
+                            </label>
+                            <input type="file" class="proj-img-file-input" id="proj-img-file" accept="image/*">
+                        </div>
+                    </div>
+                    <!-- Title -->
+                    <div>
+                        <span class="proj-input-label">Project Title</span>
+                        <input type="text" class="proj-input-field" id="proj-title-input"
+                            placeholder="e.g. My Portfolio">
+                    </div>
+                    <!-- Category -->
+                    <div>
+                        <span class="proj-input-label">Category</span>
+                        <input type="text" class="proj-input-field" id="proj-cat-input" placeholder="e.g. Web Dev">
+                    </div>
+                    <!-- URL -->
+                    <div>
+                        <span class="proj-input-label">Project URL <span
+                                style="opacity:0.5;font-size:0.65rem">(optional)</span></span>
+                        <input type="url" class="proj-input-field" id="proj-url-input" placeholder="https://...">
+                    </div>
+                    <button class="proj-save-btn" id="proj-save-btn">Save Project</button>
+                </div>
+
+                <!-- Logout -->
+                <button class="admin-logout-btn" id="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PUBLIC BGM FLOATING PLAYER ===== -->
+    <div class="bgm-player" id="bgm-player">
+        <button class="bgm-fab" id="bgm-fab" aria-label="Background Music">
+            <i class="fas fa-music" id="bgm-fab-icon"></i>
+            <div class="bgm-fab-bars" id="bgm-fab-bars">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </button>
+        <div class="bgm-tray" id="bgm-tray">
+            <div class="bgm-tray-top">
+                <div class="bgm-tray-info">
+                    <i class="fas fa-headphones"></i>
+                    <span>Background Music</span>
+                </div>
+                <div class="bouncy-toggle-wrap">
+                    <button class="bouncy-toggle" id="bgm-bouncy-toggle" role="switch" aria-checked="false"
+                        aria-label="Toggle Background Music">
+                        <div class="bouncy-toggle-thumb"></div>
+                        <div class="bouncy-toggle-ripple"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="bgm-volume-row">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" class="admin-volume-slider" id="bgm-volume" min="0" max="100" value="50">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden audio element for BGM -->
+    <audio id="bgm-audio" loop preload="none">
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

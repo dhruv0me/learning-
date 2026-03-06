@@ -1,0 +1,121 @@
+[
+    {
+        "id": "8becbb3c-7594-44a1-b55e-e0141fb3b3bd",
+        "name": "Test User",
+        "email": "test@test.com",
+        "message": "Hello from Python script!",
+        "timestamp": "2026-03-04T16:05:42.462256"
+    },
+    {
+        "id": "e28fb39a-3617-4ced-8757-3eff5bd173c0",
+        "name": "drizo",
+        "email": "dhruvsen286@gmail.com",
+        "message": "lets connect",
+        "timestamp": "2026-03-04T16:08:11.008225"
+    },
+    {
+        "id": "21119351-18d7-4795-8629-2c01ca5e4b1b",
+        "name": "wefewfswff",
+        "email": "gegeg@gger",
+        "message": "gegegege",
+        "timestamp": "2026-03-04T16:11:28.706707"
+    },
+    {
+        "id": "5d0c5631-30f3-47fc-b6e4-142a9827a697",
+        "name": "Test",
+        "email": "test@test.com",
+        "message": "Test Message",
+        "timestamp": "2026-03-04T16:16:00.393056"
+    },
+    {
+        "id": "f5d55594-0ece-43fd-8af4-3da83792043d",
+        "name": "gteee",
+        "email": "gegeg@gger",
+        "message": "etetete",
+        "timestamp": "2026-03-04T16:16:48.751927"
+    },
+    {
+        "id": "c06d2f0a-0559-4f15-8c81-e0c11abc7e08",
+        "name": "eg",
+        "email": "gegeg@gger",
+        "message": "egergee",
+        "timestamp": "2026-03-04T16:18:13.695845"
+    },
+    {
+        "id": "7206a61a-4317-42c6-a894-e9723d04d307",
+        "name": "Test Mailer",
+        "email": "tester@test.com",
+        "message": "Testing new email credentials",
+        "timestamp": "2026-03-04T16:30:16.206263"
+    },
+    {
+        "id": "fab7489f-d471-4d77-b966-2f66f47dee02",
+        "name": "eg",
+        "email": "gegeg@gger",
+        "message": "dfsdfsff",
+        "timestamp": "2026-03-04T16:31:54.412271"
+    },
+    {
+        "id": "953695f8-f235-4721-af74-46c473e37c1c",
+        "name": "Env Test",
+        "email": "test@test.com",
+        "message": "Verifying okh660353 email delivery.",
+        "timestamp": "2026-03-04T16:34:55.231058"
+    },
+    {
+        "id": "c2c99ccb-0cd5-4b20-9d43-afd3f80b8b58",
+        "name": "eg",
+        "email": "gegeg@gger",
+        "message": "sdss",
+        "timestamp": "2026-03-04T16:36:15.061498"
+    },
+    {
+        "id": "7bfefbe2-8278-4c52-8c22-b2a86e048b9c",
+        "name": "eg",
+        "email": "dhruvsen286@gmail.com",
+        "message": "reeeeeeeeeeeeeeeeeee",
+        "timestamp": "2026-03-04T16:36:37.926779"
+    },
+    {
+        "id": "0ecaaee1-71bb-4ff4-ab59-72cefaab2d95",
+        "name": "drizo",
+        "email": "dhruvsen286@gmail.com",
+        "message": "dffffffff",
+        "timestamp": "2026-03-04T16:37:44.657008"
+    },
+    {
+        "id": "f6b62d11-9ddb-417e-a018-a7b5820308b8",
+        "name": "drizo",
+        "email": "dhruvsen286@gmail.com",
+        "message": "fddddddddddd",
+        "timestamp": "2026-03-04T16:38:31.802944"
+    },
+    {
+        "id": "bdc5d37d-80a1-4014-b40e-7f03ee100b96",
+        "name": "drizo",
+        "email": "dhruvsen286@gmail.com",
+        "message": "dcvf",
+        "timestamp": "2026-03-04T16:39:23.840753"
+    },
+    {
+        "id": "7e0d54a3-75da-494e-a149-21ad746419b3",
+        "name": "drizo",
+        "email": "dhruvsen286@gmail.com",
+        "message": "edsfssdv",
+        "timestamp": "2026-03-04T16:56:02.693306"
+    },
+    {
+        "id": "b154c58c-e797-4347-b8a8-00bb46abc253",
+        "name": "Tester",
+        "email": "test@test.com",
+        "message": "Hello from the browser agent",
+        "timestamp": "2026-03-04T16:58:43.218656"
+    },
+    {
+        "id": "da3c6784-3645-43cc-a826-47a6081ec348",
+        "name": "Tester",
+        "email": "test@test.com",
+        "message": "Hello from the browser agent",
+        "timestamp": "2026-03-04T16:59:51.865535"
+    }
+]
